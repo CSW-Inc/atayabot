@@ -1,0 +1,5 @@
+# Configuration
+
+.vs/
+node_modules/
+.env
