@@ -3,8 +3,9 @@
         "noEmitOnError": true,
         "esModuleInterop": true,
         "outDir": "dist/",
-        "rootDir": "src/**/*",
-        "target": "ES2022"
+        "rootDir": "src/",
+        "target": "ES2022",
+        "moduleResolution": "node"
     },
     "exclude": ["node_modules/"]
 }
