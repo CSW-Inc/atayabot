@@ -1,5 +1,5 @@
 import { AtayaLoggerData, AtayaLoggerDataService, AtayaLoggerDataType } from "../../types/Utils";
-import moment from "moment";
+import moment from 'moment';
 import colors from 'colors';
 
 export default class LogBuilder {
