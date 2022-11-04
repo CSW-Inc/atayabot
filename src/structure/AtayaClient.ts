@@ -12,8 +12,14 @@ export default class AtayaClient extends Client {
             intents: 3243773
         });
         this.token = token;
+        this.commands = new Collection<string, Command>();
     }
 
+    /**
+     * -----------------------------
+     * Run atayabot
+     * -----------------------------
+     */
     public initialize() {
         this.login(this.token)
             .then(() => {
