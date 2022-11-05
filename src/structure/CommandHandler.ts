@@ -24,7 +24,7 @@ export default class CommandHandler {
             const commands = readdirSync(`${this.directory}${sep}${category}${sep}`).filter((files: string) => files.endsWith('.ts') || files.endsWith('.js'));
   
             for (const file of commands) {
-                const command = (await import(`${this.directory}/${category}/${file}`)).default;
+                const command = new (await import(`${this.directory}/${category}/${file}`)).default;
                 this.saveCommand(command);
             }
         });

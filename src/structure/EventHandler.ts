@@ -24,7 +24,7 @@ export default class EventHandler {
             const events = readdirSync(`${this.directory}${sep}${category}${sep}`).filter((files: string) => files.endsWith('.ts') || files.endsWith('.js'));
 
             for (const file of events) {
-                const event: Event = (await import(`${this.directory}/${category}/${file}`)).default;
+                const event: Event = new (await import(`${this.directory}/${category}/${file}`)).default;
                 this.loadEvent(event);
             }
         });

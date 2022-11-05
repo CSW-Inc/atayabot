@@ -3,4 +3,4 @@ export type EventOptions = {
     category: EventCategory;
 }
 
-export type EventCategory = 'general' | 'client' | 'guild' | 'reaction';
+export type EventCategory = 'custom' | 'client' | 'guild' | 'reaction' | 'interaction';
